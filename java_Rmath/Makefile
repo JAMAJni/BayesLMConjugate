@@ -8,10 +8,10 @@ JAVA_LIB = $(JAVA_HOME)/lib
 
 JNI_SRC = $(JAVA_HOME)/java_Rmath
 
-INCLUDE = -I$(JAVA_HOME)/java_Rmath/include
+INCLUDE = -I$(JAVA_HOME)/java_Rmath/include -I/usr/local/include
 LIB = -L/usr/local/lib -L$(JAVA_LIB)
 C_SRC = $(JNI_SRC)/c/jniRmath.c
-DYLIB = $(JAVA_HOME)/lib/libjni_java_Rmath.so
+DYLIB = $(JAVA_HOME)/lib/libjni_java_Rmath.dylib
 	
 
 # For package java_Rmath
@@ -33,4 +33,4 @@ $(DYLIB): $(C_SRC)
 
 clean: 
 	rm -fr $(JAVA_PACKAGES)/java_Rmath
-	rm -f $(JAVA_HOME)/lib/libjni_java_Rmath.so
+	rm -f $(JAVA_HOME)/lib/libjni_java_Rmath.dylib
