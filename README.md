@@ -5,27 +5,45 @@ BayesLMConjugate is a Java package providing methods for Bayesian Conjugate Line
 Build Instructions
 ------------------
 
-* Before compiling, you may have to go into the Makefile of both JAMAJniLite and java_Rmath to change the extension of generated libraries based on your operating system. On OS X you have to change all the extensions of dynamic library to .dylib while on Linux the corresponding extensions are .so
+* Before compiling, you may have to go into the Makefile of both JAMAJniLite and java_Rmath to change the extension of generated libraries based on your operating system. On OS X you have to change all the extensions of dynamic library to `.dylib` while on Linux the corresponding extensions are `.so`. Specific steps are described below.
 
-* To compile the package, enter src directory and execute "make".
+* For JAMAJniLite, enter JAMAJniLite/src directory and copy the makefile based on the operating system.
+
+For Linux user, use the following commands:
+```
+cd src
+cp Makefile.linux Makefile
+Make
+```
+
+For Mac user, use the following commands:
+```
+cd src
+cp Makefile.mac Makefile
+Make
+```
+
+* It is similar step for java_Rmath package.
+
+* To compile the package, enter src directory and execute `make`.
 This will first build the necessary libraries and packages for JAMAJniLite and java_Rmath and then build BayesLMConjugate. You don't have to do extra things for building subpackages.
 
-* To clean generated files, type “make clean” on the command line. 
+* To clean generated files, type `make clean` on the command line. 
 
 Data Format Preprocessing
 -----------------
 
 * To preprocess data, you need to install R software in advance.
 
-* Enter data directory. Then open R environment and type > source("DataFormat.R"). Then you will find two text files named X and Y generated under data directory.
+* Enter data directory. Then open R environment and type `source("DataFormat.R")`. Then you will find two text files named X and Y generated under data directory.
 
 * Notice: in your raw data, you should put Y in the first column and X in the rest columns.
 
 Running the test
 -----------------
-* For testing, enter test directory and execute “make” . If you want to clean testing results and all class files, type "make clean". 
+* For testing, enter test directory and execute `make` . If you want to clean testing results and all class files, type `make clean`. 
 
-* Notice: before running test, you have to preprocess data and execute make in the src directory.
+* Notice: before running test, you have to preprocess data and execute `make` in the src directory.
 
 Source Repository
 -----------------
