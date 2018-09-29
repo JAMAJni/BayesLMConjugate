@@ -18,12 +18,12 @@ C_SRC_LAPACK3 = $(JNI_LAPACK_SRC)/c/QRDecomposition.c
 C_SRC_LAPACK4 = $(JNI_LAPACK_SRC)/c/EigenvalueDecomposition.c
 C_SRC_LAPACK5 = $(JNI_LAPACK_SRC)/c/SingularValueDecomposition.c
 C_SRC_BLAS = $(JNI_BLAS_SRC)/c/Matrix.c
-DYLIB_LAPACK1 = $(JAVA_HOME)/lib/liblapack_LUDecomposition.dylib
-DYLIB_LAPACK2 = $(JAVA_HOME)/lib/liblapack_CholeskyDecomposition.dylib
-DYLIB_LAPACK3 = $(JAVA_HOME)/lib/liblapack_QRDecomposition.dylib
-DYLIB_LAPACK4 = $(JAVA_HOME)/lib/liblapack_EigenvalueDecomposition.dylib
-DYLIB_LAPACK5 = $(JAVA_HOME)/lib/liblapack_SingularValueDecomposition.dylib
-DYLIB_BLAS = $(JAVA_HOME)/lib/libblas_lite.dylib
+DYLIB_LAPACK1 = $(JAVA_HOME)/lib/liblapack_LUDecomposition.so
+DYLIB_LAPACK2 = $(JAVA_HOME)/lib/liblapack_CholeskyDecomposition.so
+DYLIB_LAPACK3 = $(JAVA_HOME)/lib/liblapack_QRDecomposition.so
+DYLIB_LAPACK4 = $(JAVA_HOME)/lib/liblapack_EigenvalueDecomposition.so
+DYLIB_LAPACK5 = $(JAVA_HOME)/lib/liblapack_SingularValueDecomposition.so
+DYLIB_BLAS = $(JAVA_HOME)/lib/libblas_lite.so
 	
 
 # For package JAMAJniLite
